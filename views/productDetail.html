@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{{!< layout/default}}
 
-</body>
-</html>
+<div class="productImageLarge">
+    <img src="http://g.nordstromimage.com/imagegallery/store/product/large/{{image_url}}" />
+</div>
+<span><a href="/products">Back to search results.</a></span>
+<div class="productInfo">
+    <ul>
+        <li>Brand: {{brand}}</li>
+        <li>Description: {{name}}</li>
+        <li>Product Id: {{style_id}}</li>
+        <li>Price: {{formatted_regular_price}}</li>
+    </ul>
+    <button name="addToCart" class="addToCardBtn">Add to cart</button>
+</div>

@@ -1,21 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>{{pageTitle}}</title>
-</head>
-<body>
-    <img src="static/img/nordstrom-logo.gif" />
-    <hr>
-    <br>
-    <h2>{{welcomeMessage}}</h2>
-    <br>
-    <ul>
-        <li><a href="products" target="_blank">View demo products search results page here.</a></li>
-        <li><a href="api/v1/products" target="_blank">View raw products JSON data via API</a></li>
-    </ul>
+{{!< layout/default}}
 
-    <br>
-    <a href="https://github.com/nwhitmont/nord-hapi" target="_blank">View demo project on GitHub.</a>
-</body>
-</html>
+<br>
+<h2>{{welcomeMessage}}</h2>
+<p>Thank you for stopping by to check out my demo project.<br>
+<br>
+Nils Whitmont<br>
+<i>nils.whitmont@gmail.com</i><br>
+</p>
+<br>
+
+<h3>Source Code</h3>
+<ul>
+    <li><a href="https://github.com/nwhitmont/nord-hapi" target="_blank">View project on GitHub.</a></li>
+</ul>
+
+<h3>App View Examples</h3>
+<ul>
+    <li><a href="products" target="_blank">View demo products search results page here.</a></li>
+    <li><a href="product/3552410" target="_blank">Single product view example.</a> </li>
+</ul>
+
+<h3>REST API Examples</h3>
+<ul>
+    <li><a href="api/v1/products" target="_blank">View raw products JSON data via API</a></li>
+    <li><a href="api/v1/product/3552410" target="_blank">View single product JSON by ID</a> </li>
+</ul>
+
+<h3>Design Reference Images</h3>
+<ul>
+    <li><a href="static/img/search-results.png" target="_blank">Search Results Page</a> </li>
+    <li><a href="static/img/product-page.png" target="_blank">Product Details Page</a></li>
+</ul>

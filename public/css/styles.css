@@ -1,17 +1,67 @@
-.hr1 {
+.hr2 {
     background-color: #000;
     border: 0 none;
     color: #000;
-    height: 1px;
+    height: 2px;
 }
 
-.hr4 {
+.hr5 {
     background-color: #000;
     border: 0 none;
     color: #000;
-    height: 4px;
+    height: 5px;
 }
 
 .floatRight {
     float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.contentArea {
+    width: 800px;
+    height: 1680px;
+    overflow: none;
+}
+
+.productTile {
+    width: 165px;
+    height: 360px;
+    float: left;
+    padding 4px;
+    margin: 30px;
+}
+
+.productImageLarge {
+    margin: 0 20px 0 20px;
+    float: left;
+}
+
+.productInfo {
+    width: 400px;
+    height: 400px;
+    float: left;
+    list-style-type: none;
+    border: 1px dashed black;
+}
+
+.addToCardBtn {
+    width: 360px;
+    height: 100px;
+    font-family: Arial;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #fc576f;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    }
+
+.addToCardBtn:hover {
+    background: #ff7a8e;
+    text-decoration: none;
 }

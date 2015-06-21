@@ -13,8 +13,8 @@ var Hapi = require('hapi'),
     path = require('path'),
 
 // INIT LOCAL MODULES
-    productsController = require('./lib/productsController');
-
+    productsController = require('./lib/productsController'),
+    apiController = require('./lib/apiController');
 
 // INIT SERVER
 var server = new Hapi.Server();
@@ -25,12 +25,14 @@ server.connection({ port: 3000 });
 server.views({
     engines: { html: require('handlebars') },
     relativeTo: __dirname,
-    path: './views'
+    path: './views',
+    layoutPath: './views/layout',
+    layout: 'default'
 });
 
 // INIT ROUTE DEFINITIONS
-var routes = [
-    // handle static assets, img etc.
+var appRoutes = [
+    // ROUTE STATIC ASSETS
     {
         method: 'GET',
         path: '/static/{path*}',
@@ -42,7 +44,7 @@ var routes = [
             }
         }
     },
-    // app index page
+    // APP ROUTES
     {
         method: 'GET',
         path: '/',
@@ -56,26 +58,34 @@ var routes = [
     },
     {
         method: 'GET',
-        path: '/api/v1/products',
-        config: productsController.getAllProducts
-    },
-    {
-        method: 'GET',
         path: '/products',
         config: productsController.viewAllProducts
     },
     {
         method: 'GET',
+        path: '/product/{id}',
+        config: productsController.viewProductById
+    },
+    // API ROUTES
+    {
+        method: 'GET',
+        path: '/api/v1/products',
+        config: apiController.getAllProducts
+    },
+    {
+        method: 'GET',
         path: '/api/v1/product/{id}',
-        config: productsController.getProductById
+        config: apiController.getProductById
     }
 ];
 
 // LOAD SERVER ROUTES
-server.route(routes);
+server.route(appRoutes);
 
 // START SERVER
 server.start(function () {
+    // debug info
     console.log('Server running at:', server.info.uri);
 });
+
 // END OF LINE
