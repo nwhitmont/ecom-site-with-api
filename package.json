@@ -1,0 +1,25 @@
+{
+  "name": "nord-hapi",
+  "version": "1.0.0",
+  "description": "Demo project for Nordstrom using Hapi.js/Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwhitmont/nord-hapi.git"
+  },
+  "author": "Nils Whitmont",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwhitmont/nord-hapi/issues"
+  },
+  "homepage": "https://github.com/nwhitmont/nord-hapi#readme",
+  "dependencies": {
+    "handlebars": "^3.0.3",
+    "hapi": "^8.6.1",
+    "mongodb": "^2.0.34"
+  }
+}

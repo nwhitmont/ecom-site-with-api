@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordstrom Products Demo</title>
+
+    <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <hr class="hr4">
+        <img src="static/img/nordstrom-logo.gif" id="headerLogo"/>
+        <a href="http://about.nordstrom.com/careers/#/about-us/main" target="_blank" class="floatRight">Why work with us?</a>
+        <hr class="hr1">
+    </header>
+    <div id="searchResults">
+        <div>
+            <img class="itemPreview" src="http://g.nordstromimage.com/imagegallery/store/product/medium/17/_8884657.jpg" />
+            <p>hello world!</p>
+            <p>
+                {{product.formatted_regular_price}}<br>
+                {{product.name}}<br>
+                {{product.brand}}<br>
+            </p>
+        </div>
+        {{#each products}}
+        <div>
+            <img class="itemPreview" src="http://g.nordstromimage.com/imagegallery/store/product/medium/17/_8884657.jpg" />
+            <p>
+                {{product.formatted_regular_price}}<br>
+                {{product.name}}<br>
+                {{product.brand}}<br>
+            </p>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.hr1 {
+    background-color: #000;
+    border: 0 none;
+    color: #000;
+    height: 1px;
+}
+
+.hr4 {
+    background-color: #000;
+    border: 0 none;
+    color: #000;
+    height: 4px;
+}
+
+.floatRight {
+    float: right;
+}
