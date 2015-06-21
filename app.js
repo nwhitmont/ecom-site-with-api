@@ -24,7 +24,6 @@ server.connection({ port: 3000 });
 // INIT VIEW ENGINE
 server.views({
     engines: { html: require('handlebars') },
-    relativeTo: __dirname,
     path: './views',
     layoutPath: './views/layout',
     layout: 'default'
