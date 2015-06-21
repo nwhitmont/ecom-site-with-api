@@ -19,7 +19,7 @@ var Hapi = require('hapi'),
 // INIT SERVER
 var server = new Hapi.Server();
 
-server.connection({ port: 3000 });
+server.connection({ port: 3030 });
 
 // INIT VIEW ENGINE
 server.views({
@@ -38,7 +38,7 @@ var appRoutes = [
         handler: {
             directory: {
                 path: './public',
-                listing: true,
+                listing: false,
                 index: false
             }
         }
