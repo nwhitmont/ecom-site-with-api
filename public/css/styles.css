@@ -35,7 +35,7 @@
 }
 
 .productImageLarge {
-    margin: 20px 30px 0 20px;
+    margin: 32px 30px 0 20px;
     float: left;
 }
 
@@ -61,6 +61,7 @@
     background: #fc576f;
     margin: 10px;
     text-decoration: none;
+    box-shadow: 0;
 }
 
 .addToCardBtn:hover {
