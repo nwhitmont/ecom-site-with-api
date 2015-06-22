@@ -1,15 +1,26 @@
 {{!< layout/default}}
 
+<div class="backToSearchLink floatRight">
+    <a href="/products">Back to search results:</a>
+</div>
+
 <div class="productImageLarge">
     <img src="http://g.nordstromimage.com/imagegallery/store/product/large/{{image_url}}" />
 </div>
-<span><a href="/products">Back to search results.</a></span>
+
 <div class="productInfo">
-    <ul>
-        <li>Brand: {{brand}}</li>
-        <li>Description: {{name}}</li>
-        <li>Product Id: {{style_id}}</li>
-        <li>Price: {{formatted_regular_price}}</li>
-    </ul>
+    <div class="infoLabels floatLeft">
+        Brand:<br>
+        Description:<br>
+        Product Id:<br>
+        Price:
+    </div>
+    <div class="floatLeft">
+        {{brand}}<br>
+        {{name}}<br>
+        {{style_id}}<br>
+        {{formatted_regular_price}}<br>
+    </div>
+
     <button name="addToCart" class="addToCardBtn">Add to cart</button>
 </div>

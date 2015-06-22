@@ -35,33 +35,39 @@
 }
 
 .productImageLarge {
-    margin: 0 20px 0 20px;
+    margin: 20px 30px 0 20px;
     float: left;
 }
 
 .productInfo {
     width: 400px;
     height: 400px;
+    line-height: 23px;
     float: left;
-    list-style-type: none;
-    border: 1px dashed black;
+}
+
+.infoLabels {
+    margin-right: 5px;
 }
 
 .addToCardBtn {
-    width: 360px;
-    height: 100px;
-    font-family: Arial;
+    width: 340px;
+    height: 40px;
     -webkit-border-radius: 8;
     -moz-border-radius: 8;
     border-radius: 8px;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 16px;
     background: #fc576f;
-    padding: 10px 20px 10px 20px;
+    margin: 10px;
     text-decoration: none;
-    }
+}
 
 .addToCardBtn:hover {
     background: #ff7a8e;
     text-decoration: none;
+}
+
+.backToSearchLink {
+    margin: 10px 20px 10px 0;
 }
