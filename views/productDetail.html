@@ -1,26 +1,33 @@
 {{!< layout/default}}
 
+<!-- BACK TO PRODUCTS PAGE LINK -->
 <div class="backToSearchLink floatRight">
     <a href="/products">Back to search results:</a>
 </div>
-
-<div class="productImageLarge">
-    <img src="http://g.nordstromimage.com/imagegallery/store/product/large/{{image_url}}" />
-</div>
-
-<div class="productInfo">
-    <div class="infoLabels floatLeft">
-        Brand:<br>
-        Description:<br>
-        Product Id:<br>
-        Price:
+<div>
+    <!-- PRODUCT IMAGE LARGE -->
+    <div class="productImageLarge">
+        <img src="http://g.nordstromimage.com/imagegallery/store/product/large/{{image_url}}" alt="{{name}}"/>
     </div>
-    <div class="floatLeft">
-        {{brand}}<br>
-        {{name}}<br>
-        {{style_id}}<br>
-        {{formatted_regular_price}}<br>
+    <!-- PRODUCT INFO -->
+    <div class="productInfo floatLeft">
+
+        <table>
+            <tr>
+                <td>Brand:</td><td>{{brand}}</td>
+            </tr>
+            <tr>
+                <td>Description:</td><td>{{name}}</td>
+            </tr>
+            <tr>
+                <td>Product Id:</td><td>{{style_id}}</td>
+            </tr>
+            <tr>
+                <td>Price:</td><td>{{formatted_regular_price}}</td>
+            </tr>
+        </table>
+        <!-- ADD TO CART BUTTON -->
+        <button name="addToCart" class="addToCartBtn">Add to cart</button>
     </div>
 
-    <button name="addToCart" class="addToCardBtn">Add to cart</button>
 </div>

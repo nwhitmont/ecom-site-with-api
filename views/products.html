@@ -2,7 +2,9 @@
 
 {{#each products}}
 <div class="productTile" data-id="{{style_id}}">
-    <a href="product/{{style_id}}" ><img class="itemPreview" src="http://g.nordstromimage.com/imagegallery/store/product/medium/{{image_url}}" /></a><br>
+    <a href="product/{{style_id}}" >
+        <img class="itemPreview" src="http://g.nordstromimage.com/imagegallery/store/product/medium/{{image_url}}" alt="{{name}}"/>
+    </a><br>
     {{formatted_regular_price}}<br>
     {{name}}<br>
     {{brand}}<br>

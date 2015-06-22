@@ -12,6 +12,10 @@
     height: 5px;
 }
 
+td {
+    vertical-align: top;
+}
+
 .floatRight {
     float: right;
 }
@@ -42,17 +46,17 @@
 .productInfo {
     width: 400px;
     height: 400px;
-    line-height: 23px;
-    float: left;
+    line-height: 20px;
+    margin-top: 32px;
 }
 
 .infoLabels {
     margin-right: 5px;
 }
 
-.addToCardBtn {
+.addToCartBtn {
     width: 340px;
-    height: 40px;
+    height: 35px;
     -webkit-border-radius: 8;
     -moz-border-radius: 8;
     border-radius: 8px;
@@ -60,15 +64,18 @@
     font-size: 16px;
     background: #fc576f;
     margin: 10px;
-    text-decoration: none;
-    box-shadow: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+
 }
 
-.addToCardBtn:hover {
+.addToCartBtn:hover {
     background: #ff7a8e;
     text-decoration: none;
-}
-
-.backToSearchLink {
-    margin: 10px 20px 10px 0;
 }
