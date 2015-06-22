@@ -33,6 +33,17 @@ server.views({
 
 // INIT ROUTE DEFINITIONS
 var appRoutes = [
+    // API ROUTES
+    {
+        method: 'GET',
+        path: '/api/v1/products',
+        config: apiController.getAllProducts
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/product/{id}',
+        config: apiController.getProductById
+    },
     // ROUTE STATIC ASSETS
     {
         method: 'GET',
@@ -45,19 +56,7 @@ var appRoutes = [
             }
         }
     },
-
     // APP ROUTES
-    {
-        method: 'GET',
-        path: '/',
-        handler: function(request, reply) {
-            var context = {
-                pageTitle: 'Nordstrom Demo',
-                welcomeMessage: 'Hello Nordstrom Team!'
-            }
-            reply.view('index', context);
-        }
-    },
     {
         method: 'GET',
         path: '/products',
@@ -68,17 +67,16 @@ var appRoutes = [
         path: '/product/{id}',
         config: productsController.viewProductById
     },
-
-    // API ROUTES
     {
         method: 'GET',
-        path: '/api/v1/products',
-        config: apiController.getAllProducts
-    },
-    {
-        method: 'GET',
-        path: '/api/v1/product/{id}',
-        config: apiController.getProductById
+        path: '/',
+        handler: function(request, reply) {
+            var context = {
+                pageTitle: 'Nordstrom Demo',
+                welcomeMessage: 'Hello Nordstrom Team!'
+            }
+            reply.view('index', context);
+        }
     }
 ];
 
