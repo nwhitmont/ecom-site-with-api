@@ -1,8 +1,8 @@
 #!/usr/local/bin/node
 
 /**
- *  @name server.js
- *  @summary demo app for Norstrom project
+ *  @name app.js
+ *  @summary demo app for Nordstrom project
  *  @author Nils Whitmont <nils.whitmont@gmail.com>
  *
  */
@@ -14,11 +14,12 @@ var Hapi = require('hapi'),
 
 // INIT LOCAL MODULES
     productsController = require('./lib/productsController'),
-    apiController = require('./lib/apiController');
+    apiController = require('./lib/apiController'),
 
 // INIT SERVER
-var server = new Hapi.Server();
+    server = new Hapi.Server();
 
+// INIT SERVER PORT
 server.connection({ port: 3030 });
 
 // INIT VIEW ENGINE
@@ -28,6 +29,7 @@ server.views({
     layoutPath: './views/layout',
     layout: 'default'
 });
+
 
 // INIT ROUTE DEFINITIONS
 var appRoutes = [
@@ -43,6 +45,7 @@ var appRoutes = [
             }
         }
     },
+
     // APP ROUTES
     {
         method: 'GET',
@@ -65,6 +68,7 @@ var appRoutes = [
         path: '/product/{id}',
         config: productsController.viewProductById
     },
+
     // API ROUTES
     {
         method: 'GET',
@@ -77,6 +81,7 @@ var appRoutes = [
         config: apiController.getProductById
     }
 ];
+
 
 // LOAD SERVER ROUTES
 server.route(appRoutes);
